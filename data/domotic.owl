@@ -727,6 +727,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Horloge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Horloge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Horloge"/>
+        <domotic:estDans rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Salon"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#L1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#L1">

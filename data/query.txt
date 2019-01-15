@@ -1,0 +1,10 @@
+PREFIX ns:  <http://www.semanticweb.org/rem/ontologies/2019/0/domotic#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX fn:  <http://www.w3.org/2005/xpath-functions#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT *
+WHERE {
+    ?horloge ns:date ?date .
+}

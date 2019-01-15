@@ -1,0 +1,29 @@
+@prefix ns:  <http://www.semanticweb.org/rem/ontologies/2019/0/domotic#>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+@prefix owl: <http://www.w3.org/2002/07/owl#>
+@prefix fn:  <http://www.w3.org/2005/xpath-functions#>
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+@include <OWL>.
+
+[MomentJour_reveil:     (ns:Temps   ns:estMoment    ns:Reveil)      <-  (?horloge ns:date ?date) hoursFromDateTime(?date, ?hours) equal(?hours, 8)]
+[MomentJour_matin:	    (ns:Temps   ns:estMoment    ns:Matin) 		<-  (?horloge ns:date ?date) hoursFromDateTime(?date, ?hours) ge(?hours,9)  le(?hours, 11)]
+[MomentJour_midi:	    (ns:Temps   ns:estMoment    ns:Midi) 		<-  (?horloge ns:date ?date) hoursFromDateTime(?date, ?hours) ge(?hours,12) le(?hours, 13)]
+[MomentJour_apresmidi:	(ns:Temps   ns:estMoment    ns:Apresmidi) 	<-  (?horloge ns:date ?date) hoursFromDateTime(?date, ?hours) ge(?hours,14) le(?hours, 19)]
+[MomentJour_soir:	    (ns:Temps   ns:estMoment    ns:Soir) 		<-  (?horloge ns:date ?date) hoursFromDateTime(?date, ?hours) ge(?hours,20) le(?hours, 23)]
+[MomentJour_nuit:	    (ns:Temps   ns:estMoment    ns:Nuit) 	    <-  (?horloge ns:date ?date) hoursFromDateTime(?date, ?hours) ge(?hours,0)  le(?hours, 7)]
+
+[Saison_printemps:	    (ns:Temps   ns:estSaison    ns:Printemps) 	<- (?horloge ns:date ?date) monthsFromDateTime(?date, ?month) ge(?month,4)  le(?month, 6)]
+[Saison_ete:		    (ns:Temps   ns:estSaison    ns:Ete) 		<- (?horloge ns:date ?date) monthsFromDateTime(?date, ?month) ge(?month,7)  le(?month, 9)]
+[Saison_automne:	    (ns:Temps   ns:estSaison    ns:Automne) 	<- (?horloge ns:date ?date) monthsFromDateTime(?date, ?month) ge(?month,10) le(?month, 12)]
+[Saison_hiver:          (ns:Temps   ns:estSaison    ns:Hiver)       <- (?horloge ns:date ?date) monthsFromDateTime(?date, ?month) ge(?month,1)  le(?month, 3)]
+
+
+[S1_reveil_chauffage:	        (?climatisation     ns:temperatureCible 21) 	<- (ns:Temps ns:estMomentJour ns:Reveil)   (?climatisation rdf:type ns:Climatisation)]
+[S1_reveil_volet:  	            (?volet             ns:estDansEtat ns:Ouvert)	<- (ns:Temps ns:estMomentJour ns:Reveil)   (?volet rdf:type ns:Volet)]
+[S1_reveil_fenetre_printemps:	(?fenetre           ns:estDansEtat ns:Ouvert) 	<- (ns:Temps ns:estMomentJour ns:Reveil)   (ns:Temps ns:estSaison ns:Printemps)
+                                                                                    (?fenetre rdf:type ns:Fenetre) (?chambre rdf:type ns:Chambre) (?fenetre ns:estDans ?chambre)]
+[S1_reveil_fenetre_ete:	        (?fenetre           ns:estDansEtat ns:Ouvert) 	<- (ns:Temps ns:estMomentJour ns:Reveil)   (ns:Temps ns:estSaison ns:Ete)
+                                                                                    (?fenetre rdf:type ns:Fenetre) (?chambre rdf:type ns:Chambre) (?fenetre ns:estDans ?chambre)]
+[S1_reveil_fenetre_automne:	    (?fenetre           ns:estDansEtat ns:Ouvert) 	<- (ns:Temps ns:estMomentJour ns:Reveil)   (ns:Temps ns:estSaison ns:Automne)
+                                                                                    (?fenetre rdf:type ns:Fenetre) (?chambre rdf:type ns:Chambre) (?fenetre ns:estDans ?chambre)]
