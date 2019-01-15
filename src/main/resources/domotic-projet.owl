@@ -1,0 +1,1337 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/melanie/ontologies/2019/0/domotic"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/melanie/ontologies/2019/0/domotic">
+    <Prefix name="" IRI="http://www.semanticweb.org/melanie/ontologies/2019/0/domotic#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Appartement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bibliothèque"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Capteur_de_lumière"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Capteur_de_présence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Capteur_de_température"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chambre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chauffe_serviettes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chaîne_Hi-Fi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Climatisation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cuisine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fenêtre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Horloge_connectée"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lampe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Piscine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Robinet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Robot_cuiseur_connecté"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Salon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TV"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tourne_disque_connecté"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Volets"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Capteur_d&apos;humidité"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Capteur_de_niveau_d&apos;eau"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Capteur_de_température_d&apos;eau"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contient"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#est_dans"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#allumé"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#commande_température"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#heure"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#humidité"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#luminosité"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ouvert"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#presence_detectée"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#température"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#niveau_d&apos;eau"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CE1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CH1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CH2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CH3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CH4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CH5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CH6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CL1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CLIM1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CLIM2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CLIM3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CLIM4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CLIM5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CLIM6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CLIM7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CLIM8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CP1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CP2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CP3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CP4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CP5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CP6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CP7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CP8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CS1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CT1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CT2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CT3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CT4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CT5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CT6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CT7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CT8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CTE1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CTE2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chambre_des_parents"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cuisine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#F1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#F2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#F3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#F4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#F5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#F6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hifi1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Horloge1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#L1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#L2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#L3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#L4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#L5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#L6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#L7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#L8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Piscine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#R1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RC1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Salle_de_bain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Salle_de_lecture"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Salon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TD1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TV1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#V1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#V2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#V3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#V4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#V5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#V6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#21B_Baker_Street_Appartment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chambre_d&apos;enfant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chambre_d&apos;invités"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Bain"/>
+        <Class IRI="#Appartement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bibliothèque"/>
+        <Class IRI="#Appartement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_de_lumière"/>
+        <Class IRI="#Salon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_de_présence"/>
+        <Class IRI="#Bain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_de_présence"/>
+        <Class IRI="#Bibliothèque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_de_présence"/>
+        <Class IRI="#Chambre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_de_présence"/>
+        <Class IRI="#Cuisine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_de_présence"/>
+        <Class IRI="#Piscine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_de_présence"/>
+        <Class IRI="#Salon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_de_température"/>
+        <Class IRI="#Bain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_de_température"/>
+        <Class IRI="#Bibliothèque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_de_température"/>
+        <Class IRI="#Chambre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_de_température"/>
+        <Class IRI="#Cuisine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_de_température"/>
+        <Class IRI="#Piscine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_de_température"/>
+        <Class IRI="#Salon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chambre"/>
+        <Class IRI="#Appartement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chauffe_serviettes"/>
+        <Class IRI="#Bain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chaîne_Hi-Fi"/>
+        <Class IRI="#Salon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Climatisation"/>
+        <Class IRI="#Bain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Climatisation"/>
+        <Class IRI="#Bibliothèque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Climatisation"/>
+        <Class IRI="#Chambre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Climatisation"/>
+        <Class IRI="#Cuisine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Climatisation"/>
+        <Class IRI="#Piscine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Climatisation"/>
+        <Class IRI="#Salon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cuisine"/>
+        <Class IRI="#Appartement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fenêtre"/>
+        <Class IRI="#Bibliothèque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fenêtre"/>
+        <Class IRI="#Chambre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fenêtre"/>
+        <Class IRI="#Cuisine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fenêtre"/>
+        <Class IRI="#Salon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Horloge_connectée"/>
+        <Class IRI="#Salon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lampe"/>
+        <Class IRI="#Bain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lampe"/>
+        <Class IRI="#Bibliothèque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lampe"/>
+        <Class IRI="#Chambre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lampe"/>
+        <Class IRI="#Cuisine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lampe"/>
+        <Class IRI="#Piscine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lampe"/>
+        <Class IRI="#Salon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Piscine"/>
+        <Class IRI="#Appartement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Robinet"/>
+        <Class IRI="#Bain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Robot_cuiseur_connecté"/>
+        <Class IRI="#Cuisine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Salon"/>
+        <Class IRI="#Appartement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TV"/>
+        <Class IRI="#Salon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tourne_disque_connecté"/>
+        <Class IRI="#Bibliothèque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Volets"/>
+        <Class IRI="#Bibliothèque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Volets"/>
+        <Class IRI="#Chambre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Volets"/>
+        <Class IRI="#Cuisine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Volets"/>
+        <Class IRI="#Salon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_d&apos;humidité"/>
+        <Class IRI="#Bibliothèque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_d&apos;humidité"/>
+        <Class IRI="#Chambre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_d&apos;humidité"/>
+        <Class IRI="#Cuisine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_d&apos;humidité"/>
+        <Class IRI="#Salon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_de_niveau_d&apos;eau"/>
+        <Class IRI="#Bain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_de_température_d&apos;eau"/>
+        <Class IRI="#Bain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capteur_de_température_d&apos;eau"/>
+        <Class IRI="#Piscine"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Capteur_de_température"/>
+        <Class IRI="#Fenêtre"/>
+        <Class IRI="#Lampe"/>
+        <Class IRI="#Tourne_disque_connecté"/>
+        <Class IRI="#Volets"/>
+        <Class IRI="#Capteur_d&apos;humidité"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_niveau_d&apos;eau"/>
+        <NamedIndividual IRI="#CE1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_d&apos;humidité"/>
+        <NamedIndividual IRI="#CH1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_d&apos;humidité"/>
+        <NamedIndividual IRI="#CH2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_d&apos;humidité"/>
+        <NamedIndividual IRI="#CH3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_d&apos;humidité"/>
+        <NamedIndividual IRI="#CH4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_d&apos;humidité"/>
+        <NamedIndividual IRI="#CH5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_d&apos;humidité"/>
+        <NamedIndividual IRI="#CH6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_lumière"/>
+        <NamedIndividual IRI="#CL1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Climatisation"/>
+        <NamedIndividual IRI="#CLIM1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Climatisation"/>
+        <NamedIndividual IRI="#CLIM2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Climatisation"/>
+        <NamedIndividual IRI="#CLIM3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Climatisation"/>
+        <NamedIndividual IRI="#CLIM4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Climatisation"/>
+        <NamedIndividual IRI="#CLIM5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Climatisation"/>
+        <NamedIndividual IRI="#CLIM6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Climatisation"/>
+        <NamedIndividual IRI="#CLIM7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Climatisation"/>
+        <NamedIndividual IRI="#CLIM8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_présence"/>
+        <NamedIndividual IRI="#CP1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_présence"/>
+        <NamedIndividual IRI="#CP2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_présence"/>
+        <NamedIndividual IRI="#CP3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_présence"/>
+        <NamedIndividual IRI="#CP4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_présence"/>
+        <NamedIndividual IRI="#CP5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_présence"/>
+        <NamedIndividual IRI="#CP6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_présence"/>
+        <NamedIndividual IRI="#CP7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_présence"/>
+        <NamedIndividual IRI="#CP8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chauffe_serviettes"/>
+        <NamedIndividual IRI="#CS1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_température"/>
+        <NamedIndividual IRI="#CT1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_température"/>
+        <NamedIndividual IRI="#CT2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_température"/>
+        <NamedIndividual IRI="#CT3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_température"/>
+        <NamedIndividual IRI="#CT4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_température"/>
+        <NamedIndividual IRI="#CT5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_température"/>
+        <NamedIndividual IRI="#CT6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_température"/>
+        <NamedIndividual IRI="#CT7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_température"/>
+        <NamedIndividual IRI="#CT8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_température_d&apos;eau"/>
+        <NamedIndividual IRI="#CTE1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Capteur_de_température_d&apos;eau"/>
+        <NamedIndividual IRI="#CTE2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chambre"/>
+        <NamedIndividual IRI="#Chambre_des_parents"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cuisine"/>
+        <NamedIndividual IRI="#Cuisine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fenêtre"/>
+        <NamedIndividual IRI="#F1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fenêtre"/>
+        <NamedIndividual IRI="#F2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fenêtre"/>
+        <NamedIndividual IRI="#F3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fenêtre"/>
+        <NamedIndividual IRI="#F4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fenêtre"/>
+        <NamedIndividual IRI="#F5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fenêtre"/>
+        <NamedIndividual IRI="#F6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chaîne_Hi-Fi"/>
+        <NamedIndividual IRI="#Hifi1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Horloge_connectée"/>
+        <NamedIndividual IRI="#Horloge1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lampe"/>
+        <NamedIndividual IRI="#L1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lampe"/>
+        <NamedIndividual IRI="#L2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lampe"/>
+        <NamedIndividual IRI="#L3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lampe"/>
+        <NamedIndividual IRI="#L4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lampe"/>
+        <NamedIndividual IRI="#L5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lampe"/>
+        <NamedIndividual IRI="#L6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lampe"/>
+        <NamedIndividual IRI="#L7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lampe"/>
+        <NamedIndividual IRI="#L8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Piscine"/>
+        <NamedIndividual IRI="#Piscine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Robinet"/>
+        <NamedIndividual IRI="#R1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Robot_cuiseur_connecté"/>
+        <NamedIndividual IRI="#RC1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bain"/>
+        <NamedIndividual IRI="#Salle_de_bain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bibliothèque"/>
+        <NamedIndividual IRI="#Salle_de_lecture"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Salon"/>
+        <NamedIndividual IRI="#Salon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tourne_disque_connecté"/>
+        <NamedIndividual IRI="#TD1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TV"/>
+        <NamedIndividual IRI="#TV1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Volets"/>
+        <NamedIndividual IRI="#V1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Volets"/>
+        <NamedIndividual IRI="#V2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Volets"/>
+        <NamedIndividual IRI="#V3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Volets"/>
+        <NamedIndividual IRI="#V4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Volets"/>
+        <NamedIndividual IRI="#V5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Volets"/>
+        <NamedIndividual IRI="#V6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Appartement"/>
+        <NamedIndividual IRI="#21B_Baker_Street_Appartment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chambre"/>
+        <NamedIndividual IRI="#Chambre_d&apos;enfant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chambre"/>
+        <NamedIndividual IRI="#Chambre_d&apos;invités"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CE1"/>
+        <NamedIndividual IRI="#Salle_de_bain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CH1"/>
+        <NamedIndividual IRI="#Salle_de_lecture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CH2"/>
+        <NamedIndividual IRI="#Chambre_d&apos;enfant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CH3"/>
+        <NamedIndividual IRI="#Chambre_d&apos;invités"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CH4"/>
+        <NamedIndividual IRI="#Chambre_des_parents"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CH5"/>
+        <NamedIndividual IRI="#Cuisine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CH6"/>
+        <NamedIndividual IRI="#Salon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CLIM1"/>
+        <NamedIndividual IRI="#Salle_de_bain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CLIM2"/>
+        <NamedIndividual IRI="#Salle_de_lecture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CLIM3"/>
+        <NamedIndividual IRI="#Chambre_d&apos;enfant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CLIM4"/>
+        <NamedIndividual IRI="#Chambre_d&apos;invités"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CLIM5"/>
+        <NamedIndividual IRI="#Chambre_des_parents"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CLIM6"/>
+        <NamedIndividual IRI="#Cuisine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CLIM7"/>
+        <NamedIndividual IRI="#Piscine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CLIM8"/>
+        <NamedIndividual IRI="#Salon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CP1"/>
+        <NamedIndividual IRI="#Salle_de_bain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CP2"/>
+        <NamedIndividual IRI="#Salle_de_lecture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CP3"/>
+        <NamedIndividual IRI="#Chambre_d&apos;enfant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CP4"/>
+        <NamedIndividual IRI="#Chambre_d&apos;invités"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CP5"/>
+        <NamedIndividual IRI="#Chambre_des_parents"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CP6"/>
+        <NamedIndividual IRI="#Cuisine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CP7"/>
+        <NamedIndividual IRI="#Piscine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CP8"/>
+        <NamedIndividual IRI="#Salon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CS1"/>
+        <NamedIndividual IRI="#Salle_de_bain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CT1"/>
+        <NamedIndividual IRI="#Salle_de_bain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CT2"/>
+        <NamedIndividual IRI="#Salle_de_lecture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CT3"/>
+        <NamedIndividual IRI="#Chambre_d&apos;enfant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CT4"/>
+        <NamedIndividual IRI="#Chambre_d&apos;invités"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CT5"/>
+        <NamedIndividual IRI="#Chambre_des_parents"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CT6"/>
+        <NamedIndividual IRI="#Cuisine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CT7"/>
+        <NamedIndividual IRI="#Piscine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CT8"/>
+        <NamedIndividual IRI="#Salon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CTE1"/>
+        <NamedIndividual IRI="#Salle_de_bain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#CTE2"/>
+        <NamedIndividual IRI="#Piscine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#F1"/>
+        <NamedIndividual IRI="#Salle_de_lecture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#F2"/>
+        <NamedIndividual IRI="#Chambre_d&apos;enfant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#F3"/>
+        <NamedIndividual IRI="#Chambre_d&apos;invités"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#F4"/>
+        <NamedIndividual IRI="#Chambre_des_parents"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#F5"/>
+        <NamedIndividual IRI="#Cuisine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#F6"/>
+        <NamedIndividual IRI="#Salon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#Hifi1"/>
+        <NamedIndividual IRI="#Salon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#Horloge1"/>
+        <NamedIndividual IRI="#Salon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#L1"/>
+        <NamedIndividual IRI="#Salle_de_bain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#L2"/>
+        <NamedIndividual IRI="#Salle_de_lecture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#L3"/>
+        <NamedIndividual IRI="#Chambre_d&apos;enfant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#L4"/>
+        <NamedIndividual IRI="#Chambre_d&apos;invités"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#L5"/>
+        <NamedIndividual IRI="#Chambre_des_parents"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#L6"/>
+        <NamedIndividual IRI="#Cuisine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#L7"/>
+        <NamedIndividual IRI="#Piscine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#L8"/>
+        <NamedIndividual IRI="#Salon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#R1"/>
+        <NamedIndividual IRI="#Salle_de_bain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#RC1"/>
+        <NamedIndividual IRI="#Cuisine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#TD1"/>
+        <NamedIndividual IRI="#Salle_de_lecture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#TV1"/>
+        <NamedIndividual IRI="#Salon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#V1"/>
+        <NamedIndividual IRI="#Chambre_d&apos;enfant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#V2"/>
+        <NamedIndividual IRI="#Chambre_d&apos;invités"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#V3"/>
+        <NamedIndividual IRI="#Chambre_des_parents"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#V4"/>
+        <NamedIndividual IRI="#Cuisine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#V5"/>
+        <NamedIndividual IRI="#Salon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#est_dans"/>
+        <NamedIndividual IRI="#V6"/>
+        <NamedIndividual IRI="#Salle_de_lecture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contient"/>
+        <NamedIndividual IRI="#21B_Baker_Street_Appartment"/>
+        <NamedIndividual IRI="#Chambre_des_parents"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contient"/>
+        <NamedIndividual IRI="#21B_Baker_Street_Appartment"/>
+        <NamedIndividual IRI="#Cuisine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contient"/>
+        <NamedIndividual IRI="#21B_Baker_Street_Appartment"/>
+        <NamedIndividual IRI="#Piscine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contient"/>
+        <NamedIndividual IRI="#21B_Baker_Street_Appartment"/>
+        <NamedIndividual IRI="#Salle_de_bain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contient"/>
+        <NamedIndividual IRI="#21B_Baker_Street_Appartment"/>
+        <NamedIndividual IRI="#Salle_de_lecture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contient"/>
+        <NamedIndividual IRI="#21B_Baker_Street_Appartment"/>
+        <NamedIndividual IRI="#Salon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contient"/>
+        <NamedIndividual IRI="#21B_Baker_Street_Appartment"/>
+        <NamedIndividual IRI="#Chambre_d&apos;enfant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contient"/>
+        <NamedIndividual IRI="#21B_Baker_Street_Appartment"/>
+        <NamedIndividual IRI="#Chambre_d&apos;invités"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#contient"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#est_dans"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#contient"/>
+        <ObjectProperty IRI="#est_dans"/>
+    </InverseObjectProperties>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#contient"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#est_dans"/>
+    </TransitiveObjectProperty>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#allumé"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#commande_température"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#heure"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#humidité"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#luminosité"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#ouvert"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#presence_detectée"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#température"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#niveau_d&apos;eau"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#allumé"/>
+        <Class IRI="#Chauffe_serviettes"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#allumé"/>
+        <Class IRI="#Chaîne_Hi-Fi"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#allumé"/>
+        <Class IRI="#Horloge_connectée"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#allumé"/>
+        <Class IRI="#Lampe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#allumé"/>
+        <Class IRI="#Robinet"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#allumé"/>
+        <Class IRI="#Robot_cuiseur_connecté"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#allumé"/>
+        <Class IRI="#TV"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#allumé"/>
+        <Class IRI="#Tourne_disque_connecté"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#commande_température"/>
+        <Class IRI="#Climatisation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#heure"/>
+        <Class IRI="#Horloge_connectée"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#humidité"/>
+        <Class IRI="#Capteur_d&apos;humidité"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#luminosité"/>
+        <Class IRI="#Capteur_de_lumière"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ouvert"/>
+        <Class IRI="#Fenêtre"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ouvert"/>
+        <Class IRI="#Volets"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#presence_detectée"/>
+        <Class IRI="#Capteur_de_présence"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#température"/>
+        <Class IRI="#Capteur_de_température"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#température"/>
+        <Class IRI="#Capteur_de_température_d&apos;eau"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#niveau_d&apos;eau"/>
+        <Class IRI="#Capteur_de_niveau_d&apos;eau"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#allumé"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#commande_température"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#heure"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#humidité"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#luminosité"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ouvert"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#presence_detectée"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#température"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#niveau_d&apos;eau"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
