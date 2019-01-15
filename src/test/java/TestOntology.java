@@ -17,7 +17,7 @@ public class TestOntology {
     @BeforeClass
     public static void oneTimeSetUp() throws Exception {
         // TODO : charger l'ontologie et les règles
-        model = JenaEngine.readModel("src/test/resources/domotic-projet.owl");
+        model = JenaEngine.readModel("data/family.owl");
     }
 
     @AfterClass
