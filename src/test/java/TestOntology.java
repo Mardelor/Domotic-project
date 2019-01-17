@@ -45,17 +45,17 @@ public class TestOntology {
     }
 
     @Test
-    public void testHourAndMonth() {
-        String query = QHEADER + "SELECT * WHERE {ns:Temps ns:estMoment ?moment . ns:Temps ns:estSaison ?saison}";
+    public void testContext() {
+        String query = QHEADER + "SELECT ?moment ?saison WHERE {ns:Temps ns:estMoment ?moment . ns:Temps ns:estSaison ?saison}";
 
-        updateDate(1, 8);
+        updateContext(1, 8);
         String response = JenaEngine.executeQuery(inferedModel, query);
         System.out.print(response);
 
         Assert.assertTrue(response.contains("Reveil"));
         Assert.assertTrue(response.contains("Hiver"));
 
-        updateDate(8, 13);
+        updateContext(8, 13);
         response = JenaEngine.executeQuery(inferedModel, query);
         System.out.print(response);
 
@@ -69,13 +69,14 @@ public class TestOntology {
                 "UNION" + "{?volet rdf:type ns:Volet ; ns:estDans ?piece ; ns:estDansEtat ?etat . FILTER(?etat = ns:Ouvert)}" +
                 "UNION" + "{?fenetre rdf:type ns:Fenetre ; ns:estDans ?piece ; ns:estDansEtat ?etat . ?piece rdf:type ns:Chambre}}";
 
-        updateDate(1, 8);
+        updateContext(1, 8);
         String response = JenaEngine.executeQuery(inferedModel, query);
         System.out.print(response);
 
-        updateDate(6, 9);
+        updateContext(6, 9);
         response = JenaEngine.executeQuery(inferedModel, query);
         System.out.print(response);
+
     }
 
     @Test
@@ -91,7 +92,7 @@ public class TestOntology {
     /**
      * To update month and hour
      */
-    private void updateDate(int month, int hour) {
+    private void updateContext(int month, int hour) {
         Calendar date = new GregorianCalendar(TimeZone.getTimeZone("Europe/Paris"));
         date.set(Calendar.HOUR_OF_DAY, hour);
         date.set(2019, month, 18);
