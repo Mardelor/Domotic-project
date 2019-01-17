@@ -73,7 +73,7 @@ public class TestOntology {
         String response = JenaEngine.executeQuery(inferedModel, query);
         System.out.print(response);
 
-        updateDate(6, 8);
+        updateDate(6, 9);
         response = JenaEngine.executeQuery(inferedModel, query);
         System.out.print(response);
     }
