@@ -1,6 +1,7 @@
 import org.apache.jena.datatypes.xsd.XSDDateTime;
 import org.apache.jena.rdf.model.Model;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import tools.JenaEngine;
@@ -35,11 +36,6 @@ public class TestOntology {
     public void setUp() throws Exception {
         model = JenaEngine.readModel(DATA_FILE);
         inferedModel = JenaEngine.readInferencedModelFromRuleFile(model, RULES_FILE);
-
-        Calendar date = new GregorianCalendar(TimeZone.getTimeZone("Europe/Paris"));
-        date.set(Calendar.HOUR_OF_DAY, 8);
-
-        JenaEngine.updateValueOfDataTypeProperty(inferedModel, URL, "Horloge", "date", new XSDDateTime(date));
     }
 
     @After
@@ -49,8 +45,32 @@ public class TestOntology {
     }
 
     @Test
-    public void a() {
-        System.out.print(JenaEngine.executeQuery(inferedModel, QHEADER + "SELECT ?piece ?nom WHERE {"
-                + " ?piece rdf:type ns:Pièce. ?piece ns:nom ?nom}"));
+    public void testHourAndMonth() {
+        String query = QHEADER + "SELECT * WHERE {ns:Temps ns:estMoment ?moment . ns:Temps ns:estSaison ?saison}";
+
+        updateDate(1, 8);
+        String response = JenaEngine.executeQuery(inferedModel, query);
+        System.out.print(response);
+
+        Assert.assertTrue(response.contains("Reveil"));
+        Assert.assertTrue(response.contains("Hiver"));
+
+        updateDate(5, 13);
+        response = JenaEngine.executeQuery(inferedModel, query);
+        System.out.print(response);
+
+        Assert.assertTrue(response.contains("Midi"));
+        Assert.assertTrue(response.contains("Printemps"));
+    }
+
+    /**
+     * To update month and hour
+     */
+    private void updateDate(int month, int hour) {
+        Calendar date = new GregorianCalendar(TimeZone.getTimeZone("Europe/Paris"));
+        date.set(Calendar.HOUR_OF_DAY, hour);
+        date.set(2019, month, 18);
+
+        JenaEngine.updateValueOfDataTypeProperty(inferedModel, URL, "Horloge", "date", new XSDDateTime(date));
     }
 }
