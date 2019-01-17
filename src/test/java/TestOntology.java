@@ -69,10 +69,12 @@ public class TestOntology {
                 "UNION" + "{?volet rdf:type ns:Volet ; ns:estDans ?piece ; ns:estDansEtat ?etat . FILTER(?etat = ns:Ouvert)}" +
                 "UNION" + "{?fenetre rdf:type ns:Fenetre ; ns:estDans ?piece ; ns:estDansEtat ?etat . ?piece rdf:type ns:Chambre}}";
 
+        // Paris UTC + 1 en hiver -> reveil +1h (donc 8h)
         updateContext(1, 8);
         String response = JenaEngine.executeQuery(inferedModel, query);
         System.out.print(response);
 
+        // Paris UTC + 2 en ete -> reveil +2h (donc 9h)
         updateContext(6, 9);
         response = JenaEngine.executeQuery(inferedModel, query);
         System.out.print(response);
