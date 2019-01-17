@@ -89,6 +89,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#nom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#nom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#temperatureCible -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#temperatureCible">
@@ -568,6 +577,7 @@
         <domotic:contient rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#L1"/>
         <domotic:contient rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#LX1"/>
         <domotic:contient rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#V1"/>
+        <domotic:nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biblio</domotic:nom>
     </owl:NamedIndividual>
     
 
@@ -584,6 +594,7 @@
         <domotic:contient rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Reveil"/>
         <domotic:contient rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#T2"/>
         <domotic:contient rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#V2"/>
+        <domotic:nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chambre</domotic:nom>
     </owl:NamedIndividual>
     
 
@@ -592,6 +603,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Cl2">
         <rdf:type rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Climatiseur"/>
+        <domotic:nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">climChambre</domotic:nom>
     </owl:NamedIndividual>
     
 
@@ -623,6 +635,7 @@
         <domotic:contient rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#LX3"/>
         <domotic:contient rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#T3"/>
         <domotic:contient rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#V3"/>
+        <domotic:nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cuisine</domotic:nom>
     </owl:NamedIndividual>
     
 
@@ -675,6 +688,7 @@
         <domotic:contient rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#LX6"/>
         <domotic:contient rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Piscine"/>
         <domotic:contient rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#T6"/>
+        <domotic:nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jardin</domotic:nom>
     </owl:NamedIndividual>
     
 

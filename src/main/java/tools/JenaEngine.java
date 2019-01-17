@@ -4,11 +4,12 @@
  */
 package tools;
 
-import com.hp.hpl.jena.query.*;
-import com.hp.hpl.jena.rdf.model.*;
-import com.hp.hpl.jena.reasoner.rulesys.GenericRuleReasoner;
-import com.hp.hpl.jena.reasoner.rulesys.Rule;
-import com.hp.hpl.jena.util.FileManager;
+import org.apache.jena.query.*;
+import org.apache.jena.rdf.model.*;
+import org.apache.jena.reasoner.rulesys.BuiltinRegistry;
+import org.apache.jena.reasoner.rulesys.GenericRuleReasoner;
+import org.apache.jena.reasoner.rulesys.Rule;
+import org.apache.jena.util.FileManager;
 
 import java.io.File;
 import java.io.IOException;
@@ -70,6 +71,10 @@ public class JenaEngine {
         }
         List rules = Rule.rulesFromURL(inputRuleFile);
         GenericRuleReasoner reasoner = new GenericRuleReasoner(rules);
+
+        BuiltinRegistry.theRegistry.register(new Hour());
+        BuiltinRegistry.theRegistry.register(new Month());
+
         reasoner.setDerivationLogging(true);
         reasoner.setOWLTranslation(true);
         // not needed in RDFS case

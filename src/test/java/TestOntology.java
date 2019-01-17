@@ -1,5 +1,5 @@
-import com.hp.hpl.jena.datatypes.xsd.XSDDateTime;
-import com.hp.hpl.jena.rdf.model.Model;
+import org.apache.jena.datatypes.xsd.XSDDateTime;
+import org.apache.jena.rdf.model.Model;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,8 +17,8 @@ public class TestOntology {
     /**
      * Ontologies
      */
-    private static Model model;
-    private static Model inferedModel;
+    private Model model;
+    private Model inferedModel;
 
     /**
      * Chaînes de caractères
@@ -31,7 +31,6 @@ public class TestOntology {
                                             + "PREFIX owl: <http://www.w3.org/2002/07/owl#>"
                                             + "PREFIX fn:  <http://www.w3.org/2005/xpath-functions#>"
                                             + "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>";
-
     @Before
     public void setUp() throws Exception {
         model = JenaEngine.readModel(DATA_FILE);
@@ -45,11 +44,13 @@ public class TestOntology {
 
     @After
     public void tearDown() throws Exception {
-
+        model = null;
+        inferedModel = null;
     }
 
     @Test
     public void a() {
-        System.out.println("AH");
+        System.out.print(JenaEngine.executeQuery(inferedModel, QHEADER + "SELECT ?piece ?nom WHERE {"
+                + " ?piece rdf:type ns:Pièce. ?piece ns:nom ?nom}"));
     }
 }
