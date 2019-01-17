@@ -303,9 +303,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Fermé -->
+    <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Ferme -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Fermé">
+    <owl:Class rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Ferme">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Etat"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Fenetre"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Piscine"/>

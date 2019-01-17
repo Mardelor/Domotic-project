@@ -89,6 +89,21 @@ public class TestOntology {
 
     }
 
+    @Test
+    public void testScenario4() {
+        /*
+         * Scenario : On eteint lampes, fenetres et volets partout, et l'on éteint la climatisation dans la cuisine
+         */
+        String query = QHEADER + "SELECT * WHERE {{?clim rdf:type ns:Climatiseur ; ns:estDans ?piece ; ns:estDansEtat ?etat . FILTER(?etat = ns:Eteint)}" +
+                "UNION" + "{?volet rdf:type ns:Volet ; ns:estDans ?piece ; ns:estDansEtat ?etat . FILTER(?etat = ns:Ferme)}" +
+                "UNION" + "{?fenetre rdf:type ns:Fenetre ; ns:estDans ?piece ; ns:estDansEtat ?etat . FILTER(?etat = ns:Ferme)}" +
+                "UNION" + "{?lampe rdf:type ns:Lampe ; ns:estDans ?piece ; ns:estDansEtat ?etat . FILTER(?etat = ns:Ferme)}}";
+
+        updateContext(4, 2);
+        String response = JenaEngine.executeQuery(inferedModel, query);
+        System.out.print(response);
+    }
+
     /**
      * To update month and hour
      */

@@ -18,6 +18,11 @@
 [Saison_automne:	    (ns:Temps   ns:estSaison    ns:Automne) 	<- (?horloge ns:date ?date) dateMonth(?date, ?month) ge(?month,10) le(?month, 12)]
 [Saison_hiver:          (ns:Temps   ns:estSaison    ns:Hiver)       <- (?horloge ns:date ?date) dateMonth(?date, ?month) ge(?month,1)  le(?month, 3)]
 
-[S1_reveil_clim:        (?clim      ns:temperatureCible 21) 	    <- (ns:Temps ns:estMoment ns:Reveil)   (?clim rdf:type ns:Climatiseur)]
-[S1_reveil_volet:  	    (?volet     ns:estDansEtat ns:Ouvert)	    <- (ns:Temps ns:estMoment ns:Reveil)   (?volet rdf:type ns:Volet)]
-[S1_reveil_fenetre:	    (?fenetre   ns:estDansEtat ns:Ouvert) 	    <- (ns:Temps ns:estMoment ns:Reveil)   (?fenetre rdf:type ns:Fenetre) (?chambre rdf:type ns:Chambre) (?fenetre ns:estDans ?chambre)]
+[S1_reveil_clim:        (?clim      ns:temperatureCible 21)      	<- (ns:Temps ns:estMoment ns:Reveil)   (?clim rdf:type ns:Climatiseur)]
+[S1_reveil_volet:  	    (?volet     ns:estDansEtat  ns:Ouvert)	    <- (ns:Temps ns:estMoment ns:Reveil)   (?volet rdf:type ns:Volet)]
+[S1_reveil_fenetre:	    (?fenetre   ns:estDansEtat  ns:Ouvert) 	    <- (ns:Temps ns:estMoment ns:Reveil)   (?fenetre rdf:type ns:Fenetre) (?chambre rdf:type ns:Chambre) (?fenetre ns:estDans ?chambre)]
+
+[S4_dormir_clim:        (?clim      ns:estDansEtat  ns:Eteint)      <- (ns:Temps ns:estMoment ns:Nuit)  (?clim rdf:type ns:Climatiseur) (?piece rdf:type Cuisine) (?clim ns:estDans ?piece)]
+[S4_dormir_volet:       (?volet     ns:estDansEtat  ns:Ferme)       <- (ns:Temps ns:estMoment ns:Nuit)  (?volet rdf:type ns:Volet)]
+[S4_dormir_fenetre:     (?fenetre   ns:estDansEtat  ns:Ferme)       <- (ns:Temps ns:estMoment ns:Nuit)  (?fenetre rdf:type ns:Fenetre)]
+[S4_dormir_lampe:       (?lampe     ns:estDansEtat  ns:Eteint)      <- (ns:Temps ns:estMoment ns:Nuit)  (?lampe rdf:type ns:Lampe)]
