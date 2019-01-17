@@ -168,9 +168,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliothèque -->
+    <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliotheque -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliothèque">
+    <owl:Class rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliotheque">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Pièce"/>
     </owl:Class>
     
@@ -187,7 +187,7 @@
     <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#CHifi -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#CHifi">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliothèque"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliotheque"/>
     </owl:Class>
     
 
@@ -236,7 +236,7 @@
     <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#DetecteurDePresence -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#DetecteurDePresence">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliothèque"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliotheque"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Capteur"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Chambre"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Cuisine"/>
@@ -294,7 +294,7 @@
     <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Fenetre -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Fenetre">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliothèque"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliotheque"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Chambre"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Cuisine"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Equipement"/>
@@ -344,7 +344,7 @@
     <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Lampe -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Lampe">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliothèque"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliotheque"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Chambre"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Cuisine"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Equipement"/>
@@ -357,7 +357,7 @@
     <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Luxmètre -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Luxmètre">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliothèque"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliotheque"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Capteur"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Chambre"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Cuisine"/>
@@ -547,7 +547,7 @@
     <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Volet -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Volet">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliothèque"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliotheque"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Chambre"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Cuisine"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Equipement"/>
@@ -567,10 +567,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliothèque -->
+    <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliotheque -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliothèque">
-        <rdf:type rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliothèque"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliotheque">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliotheque"/>
         <domotic:contient rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#DP1"/>
         <domotic:contient rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#F1"/>
         <domotic:contient rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Hifi"/>
@@ -582,9 +582,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Chambre1 -->
+    <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Chambre -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Chambre1">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Chambre">
         <rdf:type rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Chambre"/>
         <domotic:contient rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Cl2"/>
         <domotic:contient rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#DP2"/>
@@ -604,6 +604,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Cl2">
         <rdf:type rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Climatiseur"/>
         <domotic:nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">climChambre</domotic:nom>
+        <domotic:temperatureCible rdf:datatype="http://www.w3.org/2001/XMLSchema#int"></domotic:temperatureCible>
     </owl:NamedIndividual>
     
 

@@ -55,12 +55,37 @@ public class TestOntology {
         Assert.assertTrue(response.contains("Reveil"));
         Assert.assertTrue(response.contains("Hiver"));
 
-        updateDate(5, 13);
+        updateDate(8, 13);
         response = JenaEngine.executeQuery(inferedModel, query);
         System.out.print(response);
 
         Assert.assertTrue(response.contains("Midi"));
-        Assert.assertTrue(response.contains("Printemps"));
+        Assert.assertTrue(response.contains("Ete"));
+    }
+
+    @Test
+    public void testScenario1() {
+        String query = QHEADER + "SELECT * WHERE {{?clim rdf:type ns:Climatiseur ; ns:estDans ?piece ; ns:temperatureCible ?temp . FILTER(?temp = 21)}" +
+                "UNION" + "{?volet rdf:type ns:Volet ; ns:estDans ?piece ; ns:estDansEtat ?etat . FILTER(?etat = ns:Ouvert)}" +
+                "UNION" + "{?fenetre rdf:type ns:Fenetre ; ns:estDans ?piece ; ns:estDansEtat ?etat . ?piece rdf:type ns:Chambre}}";
+
+        updateDate(1, 8);
+        String response = JenaEngine.executeQuery(inferedModel, query);
+        System.out.print(response);
+
+        updateDate(6, 8);
+        response = JenaEngine.executeQuery(inferedModel, query);
+        System.out.print(response);
+    }
+
+    @Test
+    public void testScenario2() {
+
+    }
+
+    @Test
+    public void testScenario3() {
+
     }
 
     /**

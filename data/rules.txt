@@ -18,12 +18,6 @@
 [Saison_automne:	    (ns:Temps   ns:estSaison    ns:Automne) 	<- (?horloge ns:date ?date) dateMonth(?date, ?month) ge(?month,10) le(?month, 12)]
 [Saison_hiver:          (ns:Temps   ns:estSaison    ns:Hiver)       <- (?horloge ns:date ?date) dateMonth(?date, ?month) ge(?month,1)  le(?month, 3)]
 
-
-[S1_reveil_chauffage:	        (?climatisation     ns:temperatureCible 21) 	<- (ns:Temps ns:estMomentJour ns:Reveil)   (?climatisation rdf:type ns:Climatisation)]
-[S1_reveil_volet:  	            (?volet             ns:estDansEtat ns:Ouvert)	<- (ns:Temps ns:estMomentJour ns:Reveil)   (?volet rdf:type ns:Volet)]
-[S1_reveil_fenetre_printemps:	(?fenetre           ns:estDansEtat ns:Ouvert) 	<- (ns:Temps ns:estMomentJour ns:Reveil)   (ns:Temps ns:estSaison ns:Printemps)
-                                                                                    (?fenetre rdf:type ns:Fenetre) (?chambre rdf:type ns:Chambre) (?fenetre ns:estDans ?chambre)]
-[S1_reveil_fenetre_ete:	        (?fenetre           ns:estDansEtat ns:Ouvert) 	<- (ns:Temps ns:estMomentJour ns:Reveil)   (ns:Temps ns:estSaison ns:Ete)
-                                                                                    (?fenetre rdf:type ns:Fenetre) (?chambre rdf:type ns:Chambre) (?fenetre ns:estDans ?chambre)]
-[S1_reveil_fenetre_automne:	    (?fenetre           ns:estDansEtat ns:Ouvert) 	<- (ns:Temps ns:estMomentJour ns:Reveil)   (ns:Temps ns:estSaison ns:Automne)
-                                                                                    (?fenetre rdf:type ns:Fenetre) (?chambre rdf:type ns:Chambre) (?fenetre ns:estDans ?chambre)]
+[S1_reveil_clim:        (?clim      ns:temperatureCible 21) 	    <- (ns:Temps ns:estMoment ns:Reveil)   (?clim rdf:type ns:Climatiseur)]
+[S1_reveil_volet:  	    (?volet     ns:estDansEtat ns:Ouvert)	    <- (ns:Temps ns:estMoment ns:Reveil)   (?volet rdf:type ns:Volet)]
+[S1_reveil_fenetre:	    (?fenetre   ns:estDansEtat ns:Ouvert) 	    <- (ns:Temps ns:estMoment ns:Reveil)   (?fenetre rdf:type ns:Fenetre) (?chambre rdf:type ns:Chambre) (?fenetre ns:estDans ?chambre)]
