@@ -83,7 +83,15 @@ public class TestOntology {
 
     @Test
     public void testScenario2() {
+      String query = QHEADER + "SELECT * WHERE {{?volet rdf:type ns:Volet ; ns:estDansEtat ?etat}" +
+        "UNION" + "{?therm rdf:type ns:Thermomètre ; ns:valeur ?temperature}}";
+      updateContext(8, 14, 34);
+      String response = JenaEngine.executeQuery(inferedModel, query);
+      System.out.print(response);
 
+      updateContext(12, 16, 10);
+      response = JenaEngine.executeQuery(inferedModel, query);
+      System.out.print(response);
     }
 
     @Test
@@ -115,5 +123,17 @@ public class TestOntology {
         date.set(2019, month, 18);
 
         JenaEngine.updateValueOfDataTypeProperty(inferedModel, URL, "Horloge", "date", new XSDDateTime(date));
+    }
+
+    /**
+     * To update month, hour and temperature
+     */
+    private void updateContext(int month, int hour, int temp) {
+        Calendar date = new GregorianCalendar(TimeZone.getTimeZone("Europe/Paris"));
+        date.set(Calendar.HOUR_OF_DAY, hour);
+        date.set(2019, month, 18);
+
+        JenaEngine.updateValueOfDataTypeProperty(inferedModel, URL, "Horloge", "date", new XSDDateTime(date));
+        JenaEngine.updateValueOfDataTypeProperty(inferedModel, URL, "T2", "valeur", new Integer(temp));
     }
 }

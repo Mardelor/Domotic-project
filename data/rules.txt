@@ -24,7 +24,11 @@
 [S1_reveil_fenetre_print:	(?fenetre   ns:estDansEtat  ns:Ouvert) 	    <- (ns:Temps ns:estMoment ns:Reveil)   (ns:Temps ns:estSaison ns:Printemps) (?fenetre rdf:type ns:Fenetre) (?chambre rdf:type ns:Chambre) (?fenetre ns:estDans ?chambre)]
 [S1_reveil_fenetre_autom:	(?fenetre   ns:estDansEtat  ns:Ouvert) 	    <- (ns:Temps ns:estMoment ns:Reveil)   (ns:Temps ns:estSaison ns:Automne)   (?fenetre rdf:type ns:Fenetre) (?chambre rdf:type ns:Chambre) (?fenetre ns:estDans ?chambre)]
 
+[S2_1116_clim:          (?volet     ns:estDansEtat ns:Ferme)        <- (ns:Temps ns:estSaison ns:Ete) (?Horloge ns:date ?date) dateHour(?date, ?hours) ge(?hours,11)  le(?hours, 16) (?T2 ns:valeur ?valeur) ge(?valeur, 28)]
+
+
 [S4_dormir_clim:        (?clim      ns:estDansEtat  ns:Eteint)      <- (ns:Temps ns:estMoment ns:Nuit)  (?clim rdf:type ns:Climatiseur) (?piece rdf:type ns:Cuisine) (?clim ns:estDans ?piece)]
 [S4_dormir_volet:       (?volet     ns:estDansEtat  ns:Ferme)       <- (ns:Temps ns:estMoment ns:Nuit)  (?volet rdf:type ns:Volet)]
 [S4_dormir_fenetre:     (?fenetre   ns:estDansEtat  ns:Ferme)       <- (ns:Temps ns:estMoment ns:Nuit)  (?fenetre rdf:type ns:Fenetre)]
 [S4_dormir_lampe:       (?lampe     ns:estDansEtat  ns:Eteint)      <- (ns:Temps ns:estMoment ns:Nuit)  (?lampe rdf:type ns:Lampe)]
+
