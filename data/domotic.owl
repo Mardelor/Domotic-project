@@ -179,15 +179,8 @@
     <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#CHiFi -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#CHiFi">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Equipement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/rem/ontologies/2019/0/domotic#CHifi -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#CHifi">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliotheque"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Equipement"/>
     </owl:Class>
     
 
@@ -645,6 +638,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#DP1">
         <rdf:type rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#DetecteurDePresence"/>
+        <domotic:estDans rdf:resource="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Bibliotheque"/>
     </owl:NamedIndividual>
     
 
@@ -989,17 +983,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#CHifi"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#DetecteurDePresence"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Fenetre"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Lampe"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Luxmètre"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rem/ontologies/2019/0/domotic#Volet"/>
-        </owl:members>
-    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">

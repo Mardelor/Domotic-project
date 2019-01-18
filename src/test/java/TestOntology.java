@@ -81,22 +81,44 @@ public class TestOntology {
 
     }
 
+    /**
+     * En été, entre 11h et 16h si la température est >28°, les volets se 
+     * ferment pour conserver la fraîcheur à l'intérieur.
+     */
     @Test
     public void testScenario2() {
-      String query = QHEADER + "SELECT * WHERE {{?volet rdf:type ns:Volet ; ns:estDansEtat ?etat}" +
-        "UNION" + "{?therm rdf:type ns:Thermomètre ; ns:valeur ?temperature}}";
+      String query = QHEADER + "SELECT * WHERE {{?Volet rdf:type ns:Volet ; ns:estDansEtat ?Etat}" +
+        "UNION" + "{?Thermometre rdf:type ns:Thermomètre ; ns:valeur ?Temperature}}";
+
+      /* T=34° en été à 14h, les volets doivent être fermés */
       updateContext(8, 14, 34);
       String response = JenaEngine.executeQuery(inferedModel, query);
       System.out.print(response);
 
-      updateContext(12, 16, 10);
+      /* T=20° en été à 14h, les volets doivent être ouverts */
+      updateContext(8, 14, 20);
       response = JenaEngine.executeQuery(inferedModel, query);
       System.out.print(response);
     }
 
+    /**
+     * Si quelqu'un est dans la bibliothèque, alors la sono s'allume, sinon
+     * elle est éteinte
+     */
     @Test
     public void testScenario3() {
+      String query = QHEADER + "SELECT * WHERE {{?Hifi rdf:type ns:CHiFi ; ns:estDansEtat ?Etat}" +
+        "UNION" + "{?DP rdf:type ns:DetecteurDePresence ; ns:valeur ?Presence}}";
 
+      /* Aucune présence dans la bibliothèque, la chaîne Hifi doit être éteinte */
+      JenaEngine.updateValueOfDataTypeProperty(inferedModel, URL, "DP1", "valeur", new Integer(0));
+      String response = JenaEngine.executeQuery(inferedModel, query);
+      System.out.print(response);
+
+      /* Présence dans la bibliothèque, la chaîne Hifi doit être allumée */
+      JenaEngine.updateValueOfDataTypeProperty(inferedModel, URL, "DP1", "valeur", new Integer(1));
+      response = JenaEngine.executeQuery(inferedModel, query);
+      System.out.print(response);
     }
 
     @Test
